@@ -1,0 +1,22 @@
+<h1>Members</h1>
+
+<table border="1">
+    {% for x in data %}
+    <tr>
+        <td>{{ x.id }}</td>
+        <td>{{ x.name }}</td>
+        <td>{{ x.number }}</td>
+        <td><a href="{% url 'retrieve' x.id %}">Update</a></td>
+        <td><a href="{% url 'delete' x.id %}">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="{% url 'insert' %}">Add members</a>
+</br>
+
+<br>
+<a href="{% url 'index' %}">Go back to first page</a>
+</br>
+

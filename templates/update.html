@@ -1,0 +1,16 @@
+<h1>Update member</h1>
+
+<form action="{% url 'update' data.id %}" method="post">
+    {% csrf_token %}
+    name:<br>
+    <input name="name" value="{{ data.name }}">
+    <br><br>
+    number:<br>
+    <input name="number" value="{{ data.number }}">
+    <br><br>
+    <input type="submit" value="Update">
+</form>
+
+<br>
+<a href="{% url 'dataset' %}">Go to dataset page</a>
+</br>

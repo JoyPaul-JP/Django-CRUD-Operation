@@ -1,0 +1,16 @@
+<h1>Add member</h1>
+
+<form action="add/" method="post">
+{% csrf_token %}
+name:<br>
+<input name="name">
+<br><br>
+number:<br>
+<input name="number">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+
+<br>
+<a href="{% url 'dataset' %}">Go back to dataset page</a>
+</br>
